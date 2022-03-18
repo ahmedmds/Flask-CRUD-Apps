@@ -1,0 +1,37 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+Submit Employee Data
+{%endblock%}
+
+{% block navbar %}
+    {% include '_navbar.html' %}
+{%endblock%}
+
+{% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for category, message in messages %}
+                <li class="alert alert-{{category}}">{{message}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    {% block sub_content %}
+    {%endblock%}
+{%endblock%}
+
+<!-- Or a more custom base template -->
+<!--
+<!DOCTYPE html>
+    <head>
+        <title>Sample</title>
+    </head>
+    <body>
+        {% block body_block %}
+        {% endblock %}
+    </body>
+</html>
+-->
+

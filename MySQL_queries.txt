@@ -1,0 +1,13 @@
+In MySQL Command Line Client:
+
+mysql> CREATE DATABASE my_database;
+mysql> SHOW DATABASES;
+mysql> USE my_database;
+mysql> INSERT INTO user(user_name) VALUES('Peter');
+mysql> INSERT INTO user(user_name) VALUES('John');
+mysql> SELECT * FROM user;
+mysql> UPDATE user SET user_name='Matthew' WHERE user_name='Peter';
+mysql> DELETE FROM user WHERE user_name='John';
+mysql> ALTER TABLE user ADD password varchar(20);
+mysql> ALTER TABLE user MODIFY password varchar(50) NULL;
+mysql> ALTER TABLE user DROP COLUMN password;

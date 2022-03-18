@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="jumbotron">
+        <h1>Index</h1>
+    </div>    
+            
+    {{seasons}}
+    <br>
+    <br>
+
+    <ul>
+    {% for season in seasons %}
+        <li>{{season}}</li>            
+    {%endfor%}
+    </ul>
+    <br>
+
+    {% if 'Autumn' in seasons %}
+        <p>Autumn exists in the list of seasons</p>
+    {% endif %}
+
+    {% if users|length > 0 %}
+        <p>User names read from database: </p>
+        <ul>
+            {% for user in users %}
+                <li>{{user}}</li>            
+            {%endfor%}
+            </ul>
+        <br>
+    {% endif %}
+
+    <br>
+
+    <form method="POST">
+        <input type="password" name="submitted_input" />
+        <input type="submit" />
+    </form>
+
+    <br>
+
+    <img src={{url_for('static', filename="image1.jpg") }} height="250" width="250" />
+    
+
+{% endblock %}

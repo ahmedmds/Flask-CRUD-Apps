@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block sub_content %}
+
+    <form method="POST">
+        Name: <input type="text" name="name" />        
+        Age: <input type="text" name="age" />
+        Password: <input type="password" name="password" />  
+        <input type="submit" />
+    </form>
+
+    <br>
+    
+        
+    {% if session['username'] %}
+    <p>First employee name from session data: {{session['username']}}</p>
+    {% endif %}
+    
+
+{% endblock %}

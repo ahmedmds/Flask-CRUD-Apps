@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block sub_content %}
+
+    {% if employees|length > 0 %}
+    <p>Employees read from database: </p>
+    <table border=1>
+        {% for employee in employees %}
+        <tr>
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.password}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <br>
+    {% endif %}    
+
+{% endblock %}

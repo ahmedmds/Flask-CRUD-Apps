@@ -1,0 +1,1 @@
+Basic CRUD apps with Flask and MySQL
